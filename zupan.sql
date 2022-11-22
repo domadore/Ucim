@@ -29,3 +29,16 @@ create table mjesto(
 alter table zupanija add foreign key (zupan) references zupan(sifra);
 alter table opcina add foreign key (zupanija) references zupanija(sifra);
 alter table mjesto add foreign key (opcina) references opcina(sifra);
+
+insert into zupan(sifra,ime,prezime)
+values(null,'Luka','Lukic'),(null,'Marko','Markic');
+
+insert into zupanija(sifra,naziv,zupan)
+values(null,'Vukovarsko Srijemska',1),(null,'Splitsko Dalmatinska',2);
+
+insert into opcina(sifra,zupanija,naziv)
+values(null,1,'Jarmina'),(null,2,'Split');
+
+insert into mjesto(sifra,opcina,naziv)
+values(null,1,'Jarmina City'),(null,2,'Trogir');
+
