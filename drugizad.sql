@@ -25,3 +25,12 @@ create table sudjeluje(
 
 alter table sudjeluje add foreign key (programer) references programer(sifra);
 alter table sudjeluje add foreign key (projekt) references projekt(sifra);
+
+insert into programer(sifra,ime,prezime,datumpocetka,placa)
+values(null,'Davor','Horvat','2022-01-11 19:00:00',7500.00);
+
+insert into projekt(sifra,naziv,cijena)
+values(null,'Nije mi to sad bitno',2233.33);
+
+insert into sudjeluje(projekt,programer,datumpocetka,datumkraja)
+values(1,1,'2022-01-11 19:00:00','2023-04-20');
